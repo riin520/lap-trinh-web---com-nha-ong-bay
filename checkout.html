@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thanh toán - Cơm Nhà Ông Bảy</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="menu-checkout.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="logo">Cơm Nhà Ông Bảy</div>
+      <div class="menu-toggle" id="menu-toggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Trang chủ</a></li>
+        <li><a href="about.html">Giới thiệu</a></li>
+        <li><a href="menu.html">Thực đơn</a></li>
+        <li><a href="booking.html">Đặt bàn</a></li>
+        <li><a href="checkout.html" class="active">Thanh toán</a></li>
+      </ul>
+    </nav>
+
+    <section class="checkout-wrapper">
+      <!-- Cột đơn hàng -->
+      <div class="order-summary">
+        <h2>Đơn hàng chi tiết</h2>
+        <div id="checkout-list"></div>
+      </div>
+
+      <!-- Cột thông tin khách -->
+      <div class="customer-info">
+        <h2>Thông tin khách hàng</h2>
+        <form id="customer-form">
+          <div class="form-group">
+            <label for="customer-name">Họ và tên</label>
+            <input type="text" id="customer-name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="customer-phone">Số điện thoại</label>
+            <input
+              type="tel"
+              id="customer-phone"
+              required
+              pattern="[0-9]{9,12}"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="customer-address">Địa chỉ</label>
+            <textarea id="customer-address" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="payment-method">Phương thức thanh toán</label>
+            <select id="payment-method" required>
+              <option value="Chuyển khoản ngân hàng">
+                Chuyển khoản ngân hàng
+              </option>
+              <option value="Thanh toán khi nhận hàng">
+                Thanh toán khi nhận hàng
+              </option>
+              <!-- <option value="QR thanh toán">QR thanh toán</option> -->
+            </select>
+          </div>
+
+          <button type="submit" class="btn-complete">
+            Hoàn tất thanh toán
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <script src="checkout.js"></script>
+    <footer class="footer">
+      <div class="footer-text">
+        <h2>SEE YOU SOON!</h2>
+        <p><strong>PHONE NUMBER</strong><br />(012) 345-6789</p>
+        <p>
+          <strong>EMAIL ADDRESS</strong><br />Email:
+          <a href="mailto:info@comnhaongbay.com">info@comnhaongbay.com</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

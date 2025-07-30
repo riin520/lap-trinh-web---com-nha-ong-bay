@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu - Cơm Nhà Ông Bảy</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="menu-checkout.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="logo">Cơm Nhà Ông Bảy</div>
+      <div class="menu-toggle" id="menu-toggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Trang chủ</a></li>
+        <li><a href="about.html">Giới thiệu</a></li>
+        <li><a href="menu.html" class="active">Thực đơn</a></li>
+        <li><a href="booking.html">Đặt bàn</a></li>
+        <li><a href="checkout.html">Thanh toán</a></li>
+      </ul>
+    </nav>
+
+    <!-- MENU -->
+    <div class="menu-container">
+      <!-- Danh sách món -->
+      <div class="menu-items" id="menu-items"></div>
+
+      <!-- Giỏ hàng -->
+      <div class="cart">
+        <h3>Chi tiết đơn hàng</h3>
+        <ul id="cart-items"></ul>
+        <p class="total">Tổng cộng: <span id="total">0</span> VND</p>
+        <button onclick="goToCheckout()">Chuyển tới trang thanh toán</button>
+      </div>
+    </div>
+
+    <script src="menu.js"></script>
+  </body>
+</html>
+<footer class="footer">
+  <div class="footer-text">
+    <h2>SEE YOU SOON!</h2>
+    <p><strong>PHONE NUMBER</strong><br />(012) 345-6789</p>
+    <p>
+      <strong>EMAIL ADDRESS</strong><br />Email:
+      <a href="mailto:info@comnhaongbay.com">info@comnhaongbay.com</a>
+    </p>
+  </div>
+</footer>

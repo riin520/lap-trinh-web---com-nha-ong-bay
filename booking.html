@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đặt Bàn - Cơm Nhà Ông Bảy</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo">Cơm Nhà Ông Bảy</a>
+        <ul class="nav-links">
+          <li><a href="index.html">Trang Chủ</a></li>
+          <li><a href="about.html">Giới Thiệu</a></li>
+          <li><a href="menu.html">Thực Đơn</a></li>
+          <li><a href="booking.html">Đặt Bàn</a></li>
+          <li><a href="checkout.html">Thanh Toán</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Header -->
+    <header class="sub-header">
+      <h1>Đặt Bàn</h1>
+    </header>
+
+    <!-- Form đặt bàn -->
+    <section class="booking-form">
+      <div class="container">
+        <h2>Điền Thông Tin Đặt Bàn</h2>
+        <form id="reservationForm">
+          <label for="name">Họ và Tên</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="phone">Số Điện Thoại</label>
+          <input type="tel" id="phone" name="phone" required />
+
+          <label for="date">Ngày</label>
+          <input type="date" id="date" name="date" required />
+
+          <label for="time">Giờ</label>
+          <input type="time" id="time" name="time" required />
+
+          <label for="people">Số Lượng Người</label>
+          <input type="number" id="people" name="people" min="1" required />
+
+          <button type="submit" class="btn-book">Đặt Bàn</button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-text">
+        <h2>SEE YOU SOON!</h2>
+        <p><strong>PHONE NUMBER</strong><br />(012) 345-6789</p>
+        <p>
+          <strong>EMAIL ADDRESS</strong><br />Email:
+          <a href="mailto:contact@comnhaongbay.com">contact@comnhaongbay.com</a>
+        </p>
+        <p><strong>RESTAURANT</strong><br />123 Đường ABC, Quận 1, TP. HCM</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,280 @@
+/* Reset cơ bản */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  background-color: #fffaf5;
+  color: #3e2c1a;
+}
+
+/* Header */
+.hero {
+  background: url("img/1.png") center/cover no-repeat;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.overlay {
+  text-align: center;
+  background: rgba(62, 44, 26, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+/* kinh chao quy khach */
+.welcome-text {
+  font-size: 18px;
+  color: #fff3e0;
+  margin-bottom: 10px;
+}
+/* com nha ong bay */
+.hero-title {
+  font-size: 50px;
+  color: white;
+  margin-bottom: 20px;
+}
+/* text&box banner đặt bàn ngày */
+.btn-book {
+  background-color: #f4f1ee;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #070503;
+  transition: 0.3s;
+}
+
+.btn-book:hover {
+  background-color: #e48f49;
+}
+
+/* Giới thiệu */
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 10%;
+  background-color: #fffaf5;
+}
+
+.about-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  width: 50%;
+}
+
+.about-images img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.about-text {
+  width: 45%;
+}
+/* text giới thiệu */
+.about-text h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #3e2c1a;
+}
+
+.about-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Món nổi bật */
+.featured {
+  text-align: center;
+  padding: 50px 10%;
+  background-color: #fdf4ec;
+}
+
+.featured h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.featured h2 span {
+  text-decoration: underline;
+}
+
+.featured-grid {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.dish {
+  text-align: center;
+  width: 30%;
+}
+
+.dish img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.dish a {
+  text-decoration: none;
+  color: #3e2c1a;
+  font-weight: bold;
+}
+
+/* Footer */
+.footer {
+  background: url("./img/1.png") center/cover no-repeat;
+  padding: 60px 10%;
+  text-align: center;
+  color: rgb(244, 239, 239);
+}
+
+.footer-text a {
+  color: #f8a25c;
+  text-decoration: none;
+}
+/* about&booking////////////////////////////////////////////////////////////////////////// */
+/* Header phụ */
+.sub-header {
+  background-color: #000000;
+  color: #ff8001;
+  text-align: center;
+  padding: 40px 0;
+}
+
+/* Trang giới thiệu */
+.about-page {
+  padding: 50px 10%;
+  background-color: #fffaf5;
+}
+
+.about-page h2 {
+  color: #3e2c1a;
+  margin-bottom: 10px;
+}
+
+.about-page p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Form đặt bàn */
+.booking-form {
+  padding: 50px 10%;
+  background-color: #fdf4ec;
+}
+
+.booking-form form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.booking-form label {
+  margin: 10px 0 5px;
+}
+
+.booking-form input,
+.booking-form button {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+
+.booking-form button {
+  background-color: #f8a25c;
+  border: none;
+  cursor: pointer;
+  color: #3e2c1a;
+}
+
+.booking-form button:hover {
+  background-color: #e48f49;
+}
+/* MENU ĐIỀU HƯỚNG CHO TỪNG TRANG ///////////////////////////////////////////////////////*/
+/* Navbar */
+.navbar {
+  width: 100%;
+  background-color: #f77c01;
+  color: #fffaf5;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-links li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+  font-size: 1.1rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: rgba(252, 243, 243, 0.1);
+  box-shadow: 0 2px 4px rgba(197, 100, 75, 0.6);
+}
+
+.nav-links li a:hover {
+  color: #502400;
+  text-decoration: underline;
+}
+/* xử lý phần đặt bàn////////////////////////////////////// */
+.confirmation-box {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #fdf4ec;
+  border: 1px solid #f8a25c;
+  border-radius: 8px;
+  color: #3e2c1a;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* layout giỏ hàng & thanh toán & menu//////////////////////////////////////////////////////// */
