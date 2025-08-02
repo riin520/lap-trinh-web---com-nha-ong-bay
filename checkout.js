@@ -64,3 +64,61 @@ renderCheckout();
 document.getElementById("menu-toggle").addEventListener("click", function () {
   document.getElementById("nav-links").classList.toggle("active");
 });
+// tese/////////////////////////////////////////////////////////////////////
+// Lấy các phần tử modal
+const modal = document.getElementById("success-modal");
+const orderDetails = document.getElementById("order-details");
+const closeBtn = document.querySelector(".close-btn");
+const returnMenuBtn = document.getElementById("return-menu");
+
+document
+  .getElementById("customer-form")
+  .addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("customer-name").value.trim();
+    const phone = document.getElementById("customer-phone").value.trim();
+    const address = document.getElementById("customer-address").value.trim();
+    const payment = document.getElementById("payment-method").value;
+
+    if (!name || !phone || !address) {
+      alert("Vui lòng nhập đầy đủ thông tin!");
+      return;
+    }
+
+    const orderId = "OD" + Math.floor(1000 + Math.random() * 9000);
+    const date = new Date();
+    const dateString = `${date.toLocaleDateString()} ${date.toLocaleTimeString()}`;
+
+    // Hiển thị thông tin vào modal
+    orderDetails.innerHTML = `
+    Mã đơn hàng: <strong>${orderId}</strong><br>
+    Khách: ${name}<br>
+    Thanh toán: ${payment}<br>
+    Ngày giờ: ${dateString}<br><br>
+    Cảm ơn bạn đã đặt hàng tại <b>Cơm Nhà Ông Bảy</b>!
+  `;
+
+    modal.style.display = "flex";
+    localStorage.removeItem("cart");
+  });
+
+// Đóng modal khi bấm nút X
+closeBtn.onclick = function () {
+  modal.style.display = "none";
+  window.location.href = "menu.html";
+};
+
+// Đóng modal khi bấm nút quay lại menu
+returnMenuBtn.onclick = function () {
+  modal.style.display = "none";
+  window.location.href = "menu.html";
+};
+
+// Đóng modal khi click ra ngoài
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+    window.location.href = "menu.html";
+  }
+};
