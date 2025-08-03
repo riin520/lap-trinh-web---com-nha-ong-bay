@@ -13,7 +13,7 @@ body {
 
 /* Header */
 .hero {
-  background: url("img/1.png") center/cover no-repeat;
+  background: url("../img/1.png") center/cover no-repeat;
   height: 90vh;
   display: flex;
   align-items: center;
@@ -133,7 +133,7 @@ body {
 
 /* Footer */
 .footer {
-  background: url("./img/1.png") center/cover no-repeat;
+  background: url("../img/1.png") center/cover no-repeat;
   padding: 60px 10%;
   text-align: center;
   color: rgb(244, 239, 239);
@@ -277,4 +277,34 @@ body {
     transform: translateY(0);
   }
 }
+/* ===== Filter Buttons Style ===== */
+.menu-filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px auto;
+}
 
+.filter-btn {
+  padding: 8px 18px;
+  border-radius: 20px;
+  border: 2px solid #f77c01;
+  background-color: #fff;
+  color: #f77c01;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  background-color: #f77c01;
+  color: #fff;
+}
+
+.filter-btn.active {
+  background-color: #f77c01;
+  color: #fff;
+}

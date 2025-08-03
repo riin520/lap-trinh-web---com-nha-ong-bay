@@ -11,15 +11,28 @@ function renderCheckout() {
   let totalPrice = 0;
   orderSummary.innerHTML = "";
 
+  // Gom nhóm các món giống nhau
+  const groupedCart = {};
   cartData.forEach((item) => {
+    if (!groupedCart[item.id]) {
+      groupedCart[item.id] = { ...item, quantity: 1 };
+    } else {
+      groupedCart[item.id].quantity++;
+    }
+    totalPrice += item.price;
+  });
+
+  // Render ra các món đã gom nhóm
+  Object.values(groupedCart).forEach((groupedItem) => {
     const div = document.createElement("div");
     div.classList.add("order-item");
     div.innerHTML = `
-      <span>${item.name}</span>
-      <span>${item.price.toLocaleString()} VND</span>
+      <span>${groupedItem.name} x ${groupedItem.quantity}</span>
+      <span>${(
+        groupedItem.price * groupedItem.quantity
+      ).toLocaleString()} VND</span>
     `;
     orderSummary.appendChild(div);
-    totalPrice += item.price;
   });
 
   // Tổng cộng
